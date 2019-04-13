@@ -1,5 +1,6 @@
-.nav {
+nav {
   text-align: center;
+  padding-left: 1%;
 }
 
 .App {
@@ -12,6 +13,7 @@
 }
 
 .App-header {
+  margin-top: 1%;
   background-color: #222;
   height: 150px;
   padding: 20px;
@@ -20,6 +22,14 @@
 
 .App-intro {
   font-size: large;
+}
+
+.search-area,
+.results-area,
+.book-box {
+  margin-top: 1%;
+  padding: 1%;
+  border: solid 3px green;
 }
 
 @keyframes App-logo-spin {
