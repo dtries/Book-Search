@@ -1,8 +1,43 @@
 import React, { Component } from "react";
 import "./App.css";
+import "./utils/API";
+import API from "./utils/API";
+import BookDetail from "./components/BookDetail";
+import BookSearchEntry from "./components/BookSearchEntry"
 
 class App extends Component {
+  constructor (props) {
+    super(props);
+    this.state = {
+      result: {},
+      search: ""
+    };
+  }
+
+  componentDidMount() {
+    this.searchBooks("Pooh");
+  };
+
+
+  searchBooks = query => {
+    // console.log(`The book to get is ${query}`);
+    API.search(query)
+      .then (res => 
+        this.setState({ result: res.data.items[0].volumeInfo }))
+      .catch(err => console.log(`The error is ${err}`)); 
+      
+  };
+
+
+
   render() {
+
+    console.log(this.state.result);
+    let tilImage = this.state.result.imageLinks;
+    // console.log(this.state.result.imageLinks.smallThumbnail);
+
+    // console.log(Object.values(tilImage));
+    console.log(tilImage);
     return (
       <div className="App">
           <div className="container">
@@ -26,36 +61,22 @@ class App extends Component {
             <h2>Search For a Book
             </h2>
 
-            <div className="input-field col s6">
-              <input value="Enter a Book Title Here" id="first_name2" type="text" className="validate"/>
-              <label className="active" for="first_name2">Book Title</label>
-            </div>
-            <button className="waves-effect waves-light btn">Search</button>
+            <BookSearchEntry />
+
           </div>
 
           <div className="results-area">
             <h2>Results
             </h2>
+            {/* {this.state.result.map(bookData => ( */}
+            <BookDetail 
+              title={this.state.result.title}
+              authors={this.state.result.authors}
+              pic={this.state.result.imageLinks}
+              synopsis={this.state.result.description}
+            />
 
-
-              <div className="book-box">
-                <span className="book-title">Book Title Here</span>
-                <button className="waves-effect waves-light btn">View</button>
-                <button className="waves-effect waves-light btn">Save</button>
-
-
-              <div className="author">Written by {/* TO DO */}
-              </div>
-
-              <div className="image-and-synposis">
-                <img className="bookimage" src="" alt="Book Cover"></img>
-                <span className="synopsis">This is the synopsis</span>
-              
-              </div>
-
-            </div>
-
-
+            {/* ))} */}
           </div>
 
         </div>
@@ -64,4 +85,6 @@ class App extends Component {
   }
 }
 
+
 export default App;
+
