@@ -4,6 +4,8 @@ import "./utils/API";
 import API from "./utils/API";
 import BookDetail from "./components/BookDetail";
 import BookSearchEntry from "./components/BookSearchEntry"
+import SearchGoogleApiButton from "./components/SearchGoogleAPIButton";
+// import apiRoutes from "../routes/apiRoutes";
 
 class App extends Component {
   constructor (props) {
@@ -14,13 +16,26 @@ class App extends Component {
     };
   }
 
-  componentDidMount() {
-    this.searchBooks("Pooh");
+  // componentDidMount() {
+  //   this.searchBooks();
+  // };
+
+  handleInputChange = event => {
+    const {value} = event.target;
+    this.setState({ search:
+      value
+    });
+    console.log(this.state.search);
+  };
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    console.log(`Search state is: ${this.state.search}`);
+    this.searchBooks(this.state.search);
   };
 
 
   searchBooks = query => {
-    // console.log(`The book to get is ${query}`);
     API.search(query)
       .then (res => 
         this.setState({ result: res.data.items[0].volumeInfo }))
@@ -61,7 +76,16 @@ class App extends Component {
             <h2>Search For a Book
             </h2>
 
-            <BookSearchEntry />
+            <BookSearchEntry 
+              onChange={this.handleInputChange}
+              placeholder="Enter a Book Title Here"
+            />
+
+            <SearchGoogleApiButton 
+              onClick={this.handleFormSubmit}
+            > 
+            Search 
+            </SearchGoogleApiButton>
 
           </div>
 
