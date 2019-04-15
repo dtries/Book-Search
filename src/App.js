@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import "./utils/API";
 import API from "./utils/API";
-import BookDetail from "./components/BookDetail";
+import BookDetail from "./components/BookDetail/BookDetail";
 import BookSearchEntry from "./components/BookSearchEntry"
 import SearchGoogleApiButton from "./components/SearchGoogleAPIButton";
 // import apiRoutes from "../routes/apiRoutes";
@@ -11,7 +11,7 @@ class App extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      result: {},
+      result: [],
       search: ""
     };
   }
@@ -22,10 +22,9 @@ class App extends Component {
 
   handleInputChange = event => {
     const {value} = event.target;
-    this.setState({ search:
-      value
+    this.setState({ 
+      search: value
     });
-    console.log(this.state.search);
   };
 
   handleFormSubmit = event => {
@@ -38,7 +37,7 @@ class App extends Component {
   searchBooks = query => {
     API.search(query)
       .then (res => 
-        this.setState({ result: res.data.items[0].volumeInfo }))
+        this.setState({ result: res.data.items })) //result: res.data.items[0].volumeInfo  //grabs information about the 1st object in array [0]
       .catch(err => console.log(`The error is ${err}`)); 
       
   };
@@ -46,13 +45,20 @@ class App extends Component {
 
 
   render() {
+    // console.log(`The result is:  ${JSON.stringify(this.state.result, null, 3)}`);
+    // let ar = this.state.result;
+    let pic;
+    this.state.result.map(data => (
+        pic=data.volumeInfo.imageLinks.thumbnail
+    ));
 
-    console.log(this.state.result);
-    let tilImage = this.state.result.imageLinks;
+    console.log(pic);
+    // var bookData = this.state.result;
+    // let tilImage = this.state.result.imageLinks;
     // console.log(this.state.result.imageLinks.smallThumbnail);
 
     // console.log(Object.values(tilImage));
-    console.log(tilImage);
+    // console.log(tilImage);
     return (
       <div className="App">
           <div className="container">
@@ -77,6 +83,8 @@ class App extends Component {
             </h2>
 
             <BookSearchEntry 
+              name="googleBookSearch"
+              value={this.state.search}
               onChange={this.handleInputChange}
               placeholder="Enter a Book Title Here"
             />
@@ -92,15 +100,18 @@ class App extends Component {
           <div className="results-area">
             <h2>Results
             </h2>
-            {/* {this.state.result.map(bookData => ( */}
-            <BookDetail 
-              title={this.state.result.title}
-              authors={this.state.result.authors}
-              pic={this.state.result.imageLinks}
-              synopsis={this.state.result.description}
-            />
+        
+             {this.state.result.map(bookData => (
+                <BookDetail 
+                  key={bookData.id}
+                  title={bookData.volumeInfo.title}
+                  authors={bookData.volumeInfo.authors}
+                  pic={bookData.volumeInfo.imageLinks.thumbnail ? bookData.volumeInfo.imageLinks.thumbnail : "Pic Not Available"}
+                  publisher={bookData.volumeInfo.publisher}
+                  synopsis={bookData.volumeInfo.description}
+                />
+            ))}
 
-            {/* ))} */}
           </div>
 
         </div>
