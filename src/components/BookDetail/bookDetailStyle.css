@@ -1,0 +1,44 @@
+.book-box {
+    margin-top: 1%;
+    padding: 1%;
+    border: solid 3px green;
+  }
+
+  .title-n-buttons,
+  .author,
+  .image-and-synopsis {
+      border: dotted 2px red;
+  }
+
+.book-title {
+    font-size: 150%;
+    margin: auto;
+    text-align: left;
+    /* margin-left: 1%; */
+    /* display: inline-block; */
+}
+
+.author {
+    text-align: left;
+    font-size: 120%;
+}
+
+#view-btn {
+    margin-right: 1%;
+    /* display: inline-block; */
+}
+
+.bookimage {
+    margin: 0;
+}
+
+.synopsis {
+    text-align: justify;
+    padding-left: 13%;
+    font-size: 110%;
+    line-height: 1.75;
+    border: dashed 1px purple;
+    /* float: right; */
+}
+
+  
