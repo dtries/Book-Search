@@ -1,4 +1,5 @@
 import React from "react"
+import "./SearchEntry.css"
 
 
 export function BookSearchEntry(props) {
@@ -6,7 +7,7 @@ export function BookSearchEntry(props) {
         <div className="search-entry-area">  
             <div className="input-field col s6">
                 <input id="bookTitle" autoComplete="off" type="text" className="validate" {...props}/>
-                <label className="active">Book Title</label>
+                <label className="active" id="book-title-label">Book Title</label>
             </div>
         </div>
     );
