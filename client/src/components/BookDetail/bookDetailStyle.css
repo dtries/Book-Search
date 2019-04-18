@@ -1,0 +1,40 @@
+.book-box {
+    margin-top: 1%;
+    padding: 1%;
+    border: solid 3px green;
+  }
+
+  .title-n-buttons,
+  .authors,
+  .image-and-synopsis {
+      border: dotted 2px red;
+  }
+
+.book-title {
+    font-size: 150%;
+    margin: auto;
+    text-align: left;
+}
+
+.authors {
+    text-align: left;
+    font-size: 120%;
+}
+
+#view-btn {
+    margin-right: 1%;
+}
+
+.bookimage {
+    margin: 0;
+    padding-right: 2%;
+}
+
+.synopsis {
+    text-align: justify;
+    font-size: 110%;
+    line-height: 1.75;
+    border: dashed 1px purple;
+}
+
+  
