@@ -1,28 +1,35 @@
 .book-box {
     margin-top: 1%;
     padding: 1%;
-    border: solid 3px green;
-  }
-
-  .title-n-buttons,
-  .authors,
-  .image-and-synopsis {
-      border: dotted 2px red;
+    border: solid 3px #FFCE00;
+    box-shadow: 1px 2px 5px #262228;
   }
 
 .book-title {
-    font-size: 150%;
+    font-size: 200%;
     margin: auto;
+    /* margin-bottom: -10%; */
     text-align: left;
+    font-weight: bolder;
+    text-shadow: 1px 5px 3px #262228;
+
+}
+
+.authors,
+.publisher {
+    text-align: left;
+    font-size: 200%;
+    color: #262228;
+    font-weight: bolder;
+    text-shadow: 1px 1px 2px #FFCE00, 1px 1px 2px #FFCE00;
 }
 
 .authors {
-    text-align: left;
-    font-size: 120%;
+    margin-top: -10%;
 }
-
 #view-btn {
     margin-right: 1%;
+    background-color: #0375B4;
 }
 
 .bookimage {
@@ -32,9 +39,16 @@
 
 .synopsis {
     text-align: justify;
-    font-size: 110%;
-    line-height: 1.75;
-    border: dashed 1px purple;
+    font-size: 180%;
+    line-height: 1.5;
+    text-shadow: 1px 5px 3px #262228;
+    font-weight: 900%;
+    margin-top: -5%;
+
+}
+
+.publisher {
+    text-align: center;
 }
 
   

@@ -1,3 +1,13 @@
 #book-title-label {
     font-size: 200%;
+    color: #262228;
+    text-shadow: 1px 1px 2px #FFCE00, 1px 1px 2px #FFCE00, 1px 1px 2px #FFCE00 ;
+
+}
+
+#bookTitle {
+    padding-left: 1%;
+    color: #FFCE00;
+    font-family: 'Nanum Brush Script', cursive;
+    font-size: 175%;
 }

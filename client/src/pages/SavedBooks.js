@@ -29,12 +29,12 @@ class SavedBooks extends Component {
     return (
       <div className="saved-wrapper">
         <div className="App-header">
-            <h2>The Saved Book Widget
+            <h2 id="search-title">Saved Book Widget
             </h2>
         </div>
 
         <div className="search-area">
-            <h2> Tome Shelf
+            <h2 id="tome-title"> Tome Shelf
             </h2>
 
             <BookDetail

@@ -2,10 +2,21 @@
   padding-left: 1%;
   padding-right: 1%;
   font-size: 250%;
+  background-color: #262228;
+  color: #FFCE00;
+
+}
+
+.title-n-buttons {
+  /* border: solid purple 2px; */
+  margin-bottom: 0;
+  height: 50px;
 }
 
 .nav-term {
-  font-size: 170%;
+  color: #262228;
+  font-weight: bolder;
+  font-size: 190%;
   margin-left: 1%;
 }
 
@@ -16,28 +27,33 @@ nav {
   font-family: 'Nanum Brush Script', cursive;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+nav {
+  background-color: #FFCE00;
 }
 
 .App-header {
-  margin-top: 1%;
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+  background-color: #0375B4;
+  color: #FFCE00;
 }
 
-.App-intro {
-  font-size: large;
-}
 
 .search-area,
 .results-area {
-  margin-top: 1%;
-  padding: 1%;
-  border: solid 3px green;
+ background-color: #007849;
+ color: #FFCE00;
+ padding-top: 1px;
+}
+
+#search-title,
+#tome-title {
+  text-shadow: 1px 5px 3px #262228;
+  font-weight: bold;
 }
 
 
+@media only screen and (max-width: 350px) {
+  .brand {
+    font-size: 200%;
+  }
+
+}

@@ -1,4 +1,11 @@
 button {
     font-family: 'Nanum Brush Script', cursive;
-    margin-bottom: -1%;
+    margin-bottom: 12%;
+
+}
+
+.api-btn {
+    background-color: #FFCE00;
+    color: #262228;
+    font-weight: bold;
 }

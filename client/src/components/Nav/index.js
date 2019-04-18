@@ -6,7 +6,7 @@ function Nav() {
     <nav>
         <div className="nav-wrapper">
         <Link to="/" className="brand left">Book Widget</Link>
-        <ul id="nav-mobile" className="left hide-on-med-and-down">
+        <ul id="nav-mobile" className="left">
             <li className="nav-selector">
               <Link to="/" 
                 className={window.location.pathname === "/" || window.location.pathname === "/search" ? 
@@ -27,6 +27,7 @@ function Nav() {
         </ul>
         </div>
     </nav>
+
   );
 }
 

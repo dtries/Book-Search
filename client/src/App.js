@@ -5,6 +5,7 @@ import SavedBooks from "./pages/SavedBooks";
 import Nav from "./components/Nav";
 
 function App() {
+
   return (
     <Router>
       <div className="container">
@@ -13,7 +14,7 @@ function App() {
           <Route exact path="/" component={SearchBooks} />
           <Route exact path="/books" component={SearchBooks} />
           <Route exact path="/saved" component={SavedBooks} />
-          {/* <Route component={"/"} /> */}
+          <Route component={"/"} />
         </Switch>
       </div>
     </Router>

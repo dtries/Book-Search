@@ -87,19 +87,19 @@ class SearchBooks extends Component {
         <div className="wrapper">
           
           <div className="App-header">
-            <h2>The Book Search Widget
+            <h2 id="search-title">Book Search Widget
             </h2>
           </div>
-
+          
           <div className="search-area">
-            <h2> Tome Finder
+            <h2 id="tome-title"> Tome Finder
             </h2>
 
             <BookSearchEntry 
               name="googleBookSearch"
               value={this.state.search}
               onChange={this.handleInputChange}
-              placeholder="Enter a Book Title Here"
+              placeholder="Enter a Book Title or Author Here"
             />
 
             <SearchGoogleApiButton 
@@ -112,7 +112,7 @@ class SearchBooks extends Component {
 
           {this.state.result.length ? (
             <div className="results-area">
-              <h2>Works Retrieved
+              <h2 id="retrieved-title">Works Retrieved
               </h2>
 
               <BookDetail 

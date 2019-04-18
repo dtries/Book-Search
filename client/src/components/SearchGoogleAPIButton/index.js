@@ -3,9 +3,11 @@ import "./APIButtonStyle.css"
 function SearchGoogleApiButton ({children, onClick }) {
     return (
         <div className="row">
-            <button onClick={onClick} className={"left waves-effect waves-light btn"}>
-            {children}
-            </button>
+            <div className="col">
+                <button onClick={onClick} className={"api-btn left waves-effect waves-light btn"}>
+                {children}
+                </button>
+            </div>
         </div>
 )}
 
