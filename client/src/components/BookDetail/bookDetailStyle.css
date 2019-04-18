@@ -25,7 +25,7 @@
 }
 
 .authors {
-    margin-top: -10%;
+    margin-top: -4%;
 }
 #view-btn {
     margin-right: 1%;
@@ -51,4 +51,8 @@
     text-align: center;
 }
 
+
+@media only screen and (max-width: 800px) {
+
   
+  }

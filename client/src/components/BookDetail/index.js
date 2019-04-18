@@ -17,7 +17,7 @@ function BookDetail(props) {
 
                         <button className={props.buttonType} onClick={props.clickAction} id={book._id ? book._id : book.titleId }>{props.buttonText}</button>
                         
-                        <a className="col s1 waves-effect waves-light btn-small right" href={book.link} target="_blank" rel="noopener noreferrer" id="view-btn">View</a>
+                        <a className="col s2 waves-effect waves-light btn-small right" href={book.link} target="_blank" rel="noopener noreferrer" id="view-btn">View</a>
 
                     </div>
             

@@ -42,6 +42,8 @@ nav {
  background-color: #007849;
  color: #FFCE00;
  padding-top: 1px;
+ box-shadow: 1px 2px 5px #262228;
+
 }
 
 #search-title,

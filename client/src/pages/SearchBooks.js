@@ -118,7 +118,7 @@ class SearchBooks extends Component {
               <BookDetail 
                 books={this.state.result}
                 clickAction={this.handleSave}
-                buttonType="col s1 waves-effect waves-light btn-small right"
+                buttonType="col s2 waves-effect waves-light btn-small right"
                 buttonText = "Save"
               />
               
