@@ -5,11 +5,10 @@ A Book Information Search, Save, and Delete App - Book Information Courtesy of G
 The task was to develop a book search and save web application using the MERN (MongodB, Express, React, Node) stack. A listing of the web technologies employed is provided in the **Tech Employed** section below.
 
 ## Site Overview 
-
 <div align="center">
     <img src="/client/public/images/SearchTop.png" width="400px" /></img> 
     <img src="/client/public/images/BookCard.png" width="400px" /></img>
-    <img src="/client/public/images/Saved.png" width="400px" /></img> 
+    <img src="/client/public/images/SavedPage.png" width="400px" /></img> 
 </div>
 <br>
 Upon rendering, the home page of this two page site presents the user an with an uncluttered and straight forward user experience. The user enters a book search term, such as a title or author, and then clicks the search button. Upon clicking the search button, the app retrieves information for that search from the Google Books API and renders a card based on the information returned for each book. The card dispalys the following information for each book:title, author(s), book cover image, synopsis, and publisher. Also, on each card are view and save buttons. The view button opens a new browser tab and takes the user to the google books site for that title. The save button saves the book information to the database. The user can view his/her saved books by clicking on the Saved text in the navigation bar. The saved page displays a book card with information identical to that seen on the search page, however a delete button now replaces the save button. The delete button removes that book information from the database. Clicking on the Search or Book Widget brand logo in the navigation bar returns the user to a fresh search page.
