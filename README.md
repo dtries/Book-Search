@@ -1,68 +1,79 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Book Widget
+A Book Information Search, Save, and Delete App - Book Information Courtesy of Google Books API.
 
-## Available Scripts
+## The Task 
+The task was to develop a book search and save web application using the MERN (MongodB, Express, React, Node) stack. A listing of the web technologies employed is provided in the **Tech Employed** section below.
 
-In the project directory, you can run:
+## Site Overview 
 
-### `npm start`
+<div align="center">
+    <img src="/client/public/images/SearchTop.png" width="400px" /></img> 
+    <img src="/client/public/images/BookCard.png" width="400px" /></img>
+    <img src="/client/public/images/Saved.png" width="400px" /></img> 
+</div>
+<br>
+Upon rendering, the home page of this two page site presents the user an with an uncluttered and straight forward user experience. The user enters a book search term, such as a title or author, and then clicks the search button. Upon clicking the search button, the app retrieves information for that search from the Google Books API and renders a card based on the information returned for each book. The card dispalys the following information for each book:title, author(s), book cover image, synopsis, and publisher. Also, on each card are view and save buttons. The view button opens a new browser tab and takes the user to the google books site for that title. The save button saves the book information to the database. The user can view his/her saved books by clicking on the Saved text in the navigation bar. The saved page displays a book card with information identical to that seen on the search page, however a delete button now replaces the save button. The delete button removes that book information from the database. Clicking on the Search or Book Widget brand logo in the navigation bar returns the user to a fresh search page.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Run App Through GitHub Pages Deployment
+Try the [App](https://book-search-dtr.herokuapp.com/).
+ 
+## Getting Started on Your Own Machine
+1. Clone the [repo](https://github.com/dtries/book-search.git) to your machine. 
+1. Navigate to the *book-search* directory on your machine using GitBash or your terminal.
+1. Enter *npm install* in GitBash or your terminal.
+   * This will install the proper js package files from a package JSON file.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+   
+   ## Running on a Local Server
+   1. From within the book-search folder in your terminal or GitBash, enter *npm start*. this will open a local server on your machine. 
+   1. The book search app will load automatically via the local server.
+     
+## User Actions:
 
-### `npm test`
+  * Navagation Bar (All pages)
+    1. Click Book Widget brand logo to reload or return to home page (Note: Home page and search page are identical views).
+    2. Click Search to reload Home/Search page.
+    3. Click Save to load saved books page.
+  * Search Page 
+    * Search Area
+    1. Enter book search term (e.g., book title or author). 
+    2. Click *Search* button to begin google books search for term entered.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    * Search Page Search Results Book Card List
+    1. Click *Save* button to save book to user list.
+    2. Click *View* button to view more about book at google books.
 
-### `npm run build`
+  * Saved Page
+    1. Click *Delete* button to delete book from saved list.
+    2. Click *View* button to view more about book at google books.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   
+## Tech Employed
+* Node.js - (see below)
+* Axios - https://www.npmjs.com/package/axios
+* Concurrently - https://www.npmjs.com/package/concurrently
+* ESLint - https://eslint.org/
+* Express - https://expressjs.com/
+* If-env - https://www.npmjs.com/package/if-env
+* JavaScript - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Language_Resources
+* JQuery - https://jquery.com/
+* Mongoose - https://www.npmjs.com/package/mongoose
+* Nodemon - https://www.npmjs.com/package/nodemon
+* React - https://reactjs.org/
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## Prerequisites
+* Node.js - The latest version of Node is available at: https://nodejs.org/en/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Built With
+VS Code - Text Editor
 
-### `npm run eject`
+## Authored and Maintained By:
+* Dennis Ries
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Contact: dtries@gmail.com
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+© 2019 GitHub, Inc.
+Terms   
+Privacy
+Security
+Status
