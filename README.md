@@ -55,7 +55,7 @@ Try the [App](https://book-search-dtr.herokuapp.com/).
 * Express - https://expressjs.com/
 * If-env - https://www.npmjs.com/package/if-env
 * JavaScript - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Language_Resources
-* JQuery - https://jquery.com/
+* JSX - https://reactjs.org/docs/introducing-jsx.html
 * mLab MongoDB - https://mlab.com/
 * MongoDB - https://www.mongodb.com/
 * Mongoose - https://www.npmjs.com/package/mongoose
